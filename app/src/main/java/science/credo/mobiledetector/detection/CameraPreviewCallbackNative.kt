@@ -139,7 +139,7 @@ class CameraPreviewCallbackNative(private val mContext: Context) : Camera.Previe
                         val JSON = MediaType.parse("application/json; charset=utf-8")
                         val body = RequestBody.create(JSON, jsonObject.toString())
                         val request = Request.Builder()
-                                .url("http://10.0.0.1/")
+                                .url("http://192.168.30.3:7000/api/particle/receive")
                                 .post(body)
                                 .build()
 
